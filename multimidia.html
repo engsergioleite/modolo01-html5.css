@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Multimídia</title>
+</head>
+<body>
+<h1>Multimídia</h1>
+        <p>Mostrarei a aplicação dos conceitos para inserção de imagens, áudios e vídeos.</p>
+
+    <h2>Imagens Dinamicas</h2>
+
+        <p>Considerando que o tamanho de onde a imagem vai ser visualizada em diversos locais (TV, notebook, smartphone, etc) devemos adicionar multiplas imagens para tamanhos diferentes. E nesse caso, devemos add varias imagens para não trabalhar com uma imagem pesada (para TV) e diminuir seu tamanho apenas no CSS, pois seria pesado sem necessidade abrir a mesma imagem em um smartphone. <br> Para adicionar imagens, usamos a TAG IMG, mas considerando os tamanhos e o peso do site é recomendado usar a TAG PICTURE e dentro dela, a TAG SOURCE para adicionar vários formatos de imagem que vão se adequando ao tamanho da tela, sendo usadas a TAG PICTURE, SOURCE e IMG ao mesmo tempo. Todas dentro da PICTURE. <br> No exemplo abaixo, se você diminuir o tamanho da tela, a imagem mudará automaticamente. </p>
+
+    <picture>
+        <source media="(max-width: 500px)" srcset="imagens/pequena.png" type="image/png">
+        <source media="(max-width: 900px)" srcset="imagens/media.png" type="image/png">
+        <img src="imagens/grande.png" alt="Imagem grande">
+    </picture>
+
+
+    <h2>Áudio - NÂO FIZEMOS UPLOAD DO ÁUDIO</h2>
+
+        <p>Para adicionar audio você precisa usar a TAG AUDIO: audio src="local do arquivo" controlls autoplay (para tocar ao carregar).</p>
+
+    <p>podemos usar alguns atributos como preload com os seguintes valores: metadata (carrega apenas informações do arquivo), none (não carrega até o usuário clicar em play) e auto (Padrão - Carrega o arquivo inteiro ao carregar a página). O atributo controls para apresentar o player na tela e o autoplay para tocar automaticamente.</p>
+
+    <p>Podemos usar vários SOURCES para colocar vários arquivos com extensões diferentes e o navegador poder ter opções. Explicado no paragrafo sobre Imagens dinâmicas e vídeo.</p>
+
+    <h2>Vídeo</h2>
+        <p>Podemos adicionar vídeos de várias maneiras, simplesmente usando a TAG VIDEO, caso o arquivo esteja no mesmo servidor da pagina ou incorporando vídeos externos usando a TAG IFRAME, copiada diretamente da pagina do vídeo. </p>
+
+
+        <H3>Vídeos Externos</H3>
+
+        <p>Para incorporar vídeos externos, usamos a TAG IFRAME e basta copiar e colar o código de incorporação onde o mesmo esta hospedado. Podendo configurar width e outros.</p>
+
+<br>
+
+<iframe width="800" height="488" src="https://www.youtube.com/embed/yAKw_CScZJ4" title="Como usar iframes no HTML5? (E o que são Iframes) - Aula 13" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+    <h3>Videos internos - não fizemos upload do vídeo</h3>
+
+    <p>Usamos a TAG VIDEO e podemos usar atributos de configuração como o width (largura do vídeo), poster (imagem de capa), controls (controles do vídeo) e autoplay (começar o video automaticamente ao carregar a página).</p>
+
+    <p>
+        <code><pre>
+    video src="local do arquivo" type="tipo de arquivo"</pre></code>
+        
+    </p>
+
+    <p>Para atender ao máximo de navegadores e formatos, podemos colocar vídeos em vários formatos e colocar as prioridades de execução, sempre procurando atender o mais padrão e melhor compressão com a tag SOURCE, contendo os videos, abaixo da tag VIDEO. Por fim, uma mensagem caso nenhuma opção seja possível de ser carregada.</p>    
+
+    <p>
+        <code><pre>
+            
+    video 
+    width="800" poster="" controls
+    source src="formato1" type="tipo de arquivo"
+    source src="formato2" type="tipo de arquivo"
+    source src="formato3" type="tipo de arquivo"
+
+    p infelizmente o navegador não consegue abrir seu vídeo. p
+    
+    /video
+        </pre>
+        </code>
+    </p>
+   
+    
+    <p><a href="index.html" target="_parent" rel="prev">Voltar</a></p>
+</body>
+</html>

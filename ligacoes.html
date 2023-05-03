@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ligações - Links</title>
+</head>
+<body>
+<h1>Links</h1>
+
+        <p>Estudei a criação de links com a TAG A (ancora) e o uso dos atributos TARGET (_blanc (abre em nova janela), _self (abre na mesma janela), _top e _parent) e REL (next (próxima página), prev (página anterior), author (indica link p site do autor do texto), external (link para outro site), nofollow(indoca links para sites patrocinados, não endossador pela página)). </p>
+
+    <h2>Links internos</h2>
+        
+        <p>O usuário é levado para uma página dentro da página, aprendemos que se o link for interno, é interessante a página abrir na mesma janela e para isso usamos TARGET _SELF que é o padrão e para o atributo REL, usamos o next, para uma próxima página e prev, para voltar a anterior, atributos usados nesse projeto.</p>
+
+
+    <h2>Links Externos</h2>
+
+        <p>Aprendemos que para links externos, devemos usar a TARGET _BLANC e REL External, author ou nofollow), caso queiramos que a página seja aberta em uma nova página e para indicar o tipo de página (rel). Muito usado para encaminhar o usuário para outro site, sem fazer ele sair do seu.</p>
+
+    <h2>Links para download</h2>
+
+        <p>Para o download, precisamos adicionar o caminho do arquivo no parametro HREF="", adicionar o parametro download="" com o nome do arquivo e o TYPE</p>
+
+<code><a>href="link na pasta" download="arquivo.zip" type="application/zip"</a></code>
+
+<ul>
+<p>Seguem abaixo os TYPEs mais usados:</p>
+<li>application/zip</li>
+<li>text/html</li>
+<li>text/css</li>
+<li>text/j.scripp</li>
+<li>video/mp4</li>
+<li>image.jpeg</li>
+
+<p>Obs.: O Site <a href="http://www.iana.org" target="_blank" rel="external">IANA.ORG</a> serve de pesquisa para os TYPEs</p>
+
+</ul>
+
+    
+    <p><a href="index.html" target="_parent" rel="prev">Voltar</a></p>
+</body>
+</html>
